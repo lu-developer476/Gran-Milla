@@ -92,6 +92,35 @@ li {
   box-shadow: 0 14px 35px rgba(95, 68, 36, 0.09);
 }
 
+
+.about-link {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: auto;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(95, 68, 36, 0.18);
+}
+
+.about-page {
+  padding: 2rem;
+}
+
+.about-page h2,
+.about-page h3 {
+  text-align: center;
+}
+
+.about-page p {
+  color: var(--ink-700);
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 92ch;
+  margin: 0 auto 1rem;
+}
+
 .hero {
   padding: 2.2rem;
   animation: travelFade 900ms ease-out;
@@ -99,28 +128,18 @@ li {
 
 .brand-row {
   display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  margin-bottom: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .brand-logo {
-  width: 62px;
-  height: 62px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
   border-radius: 14px;
   border: 1px solid rgba(184, 129, 62, 0.35);
   box-shadow: 0 10px 18px rgba(95, 68, 36, 0.12);
   background: rgba(255, 255, 255, 0.8);
-}
-
-.hero-tag {
-  display: inline-block;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ocre-400);
-  font-size: 0.8rem;
 }
 
 h1 {
@@ -139,16 +158,32 @@ h3 {
   margin: 0;
 }
 
-.intro {
-  max-width: 70ch;
+.intro-block {
+  max-width: 95ch;
+  margin: 0 auto 0.8rem;
   color: var(--ink-700);
-  line-height: 1.7;
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+.intro-block p {
+  margin: 0 0 1rem;
+}
+
+.intro-block p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
 }
 
 .hero-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.8rem;
+}
+
+.hero-highlights h3 {
+  text-align: center;
 }
 
 .hero-highlights article,
@@ -211,6 +246,11 @@ h3 {
   border: 1px solid rgba(184, 129, 62, 0.25);
 }
 
+.destino-card h3,
+.provincia {
+  text-align: center;
+}
+
 .provincia {
   margin: 0.35rem 0;
   color: var(--ocre-400);
@@ -239,6 +279,20 @@ h3 {
   gap: 0.8rem;
   width: 100%;
   max-width: 100%;
+}
+
+
+.form-status {
+  margin: 0.9rem auto 0;
+  width: min(560px, 100%);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(184, 129, 62, 0.5);
+  background: linear-gradient(180deg, rgba(248, 234, 212, 0.9), rgba(255, 255, 255, 0.95));
+  color: var(--ink-900);
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(95, 68, 36, 0.12);
 }
 
 input,
@@ -279,6 +333,26 @@ button {
 button:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
+}
+
+.site-footer {
+  padding: 1rem 1.4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.text-cyber-gold {
+  color: var(--ocre-400);
+  font-weight: 700;
 }
 
 @keyframes travelFade {
@@ -333,23 +407,68 @@ button:hover {
   }
 }
 
-@media (max-width: 900px) {
-  .travel-options-grid,
+@media (max-width: 1440px) {
+  .container {
+    width: min(1200px, 94%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .travel-options-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro-block {
+    max-width: 88ch;
+  }
+}
+
+@media (max-width: 992px) {
   .destino-grid {
     grid-template-columns: 1fr;
     grid-template-rows: none;
   }
+
+  .brand-logo {
+    width: 180px;
+    height: 180px;
+  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 576px) {
   .hero,
   .route-section,
-  .contacto {
-    padding: 1.2rem;
+  .contacto,
+  .site-footer {
+    padding: 1rem;
+  }
+
+  .travel-options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-block {
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
 
   .brand-logo {
-    width: 52px;
-    height: 52px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .site-footer p {
+    font-size: 0.82rem;
+  }
+
+  .about-link {
+    top: 0.65rem;
+    right: 0.65rem;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .about-page {
+    padding: 1rem;
   }
 }
