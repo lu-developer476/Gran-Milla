@@ -182,7 +182,8 @@ h3 {
   gap: 0.8rem;
 }
 
-.hero-highlights h3 {
+.hero-highlights h3,
+.hero-highlights p {
   text-align: center;
 }
 
