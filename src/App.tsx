@@ -96,10 +96,7 @@ const opcionesDeViaje = [
 export default function App() {
   const [view, setView] = useState<"home" | "about">("home")
 
-  const navLabel = useMemo(
-    () => (view === "home" ? "Quiénes somos" : "Volver al inicio"),
-    [view]
-  )
+  const navLabel = useMemo(() => (view === "home" ? "Quiénes somos" : "Volver al inicio"), [view])
 
   return (
     <div className="page-shell">
