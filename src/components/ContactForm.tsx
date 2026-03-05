@@ -9,7 +9,7 @@ export default function ContactForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    alert("Mensaje enviado. Gracias por contactar a Gran Milla.")
+    alert("Mensaje recibido. Pronto nos estaremos contactando.")
     setForm({ name: "", email: "", message: "" })
   }
 
