@@ -197,7 +197,9 @@ export default function App() {
 
             <footer className="site-footer glass-card" aria-label="Pie de página">
               <p>
-                <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los derechos reservados • Built with React.js & TypeScript • UX/UI Interface • Deployed on Vercel ®
+                <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los
+                derechos reservados • Built with React.js & TypeScript • UX/UI Interface • Deployed
+                on Vercel ®
               </p>
             </footer>
           </>
