@@ -32,15 +32,15 @@ const destinos = [
       "San Martín de los Andes transmite serenidad desde el primer momento. Su entorno de bosques, montañas y lagos invita a recorrer sin apuro, disfrutando cada tramo de la Ruta de los Siete Lagos como parte central de la experiencia. Es un lugar muy elegido por quienes valoran el contacto con la naturaleza, los ritmos lentos y una atmósfera de pueblo de montaña bien cuidada.",
   },
   {
-    nombre: "Mendoza",
-    provincia: "Cordillera de los Andes",
+    nombre: "Cordillera de los Andes",
+    provincia: "Mendoza",
     imagen: "/images/mendoza.jpg",
     descripcion:
       "Mendoza propone una combinación poco común entre paisaje imponente y cultura del buen vivir. La experiencia en bodegas, los caminos del vino y la vista permanente de la cordillera conviven con actividades de aventura en alta montaña. Es un destino que permite diseñar viajes a medida: desde propuestas gourmet y descanso hasta itinerarios más exigentes para quienes quieren movimiento y aire de altura.",
   },
   {
-    nombre: "Salta",
-    provincia: "Valles Calchaquíes",
+    nombre: "Valles Calchaquíes",
+    provincia: "Salta",
     imagen: "/images/salta.jpeg",
     descripcion:
       "Salta ofrece una identidad muy definida, donde la historia colonial, la música local y los paisajes de altura se integran de manera natural. Sus rutas atraviesan quebradas, valles y pueblos con fuerte tradición cultural, lo que convierte cada desplazamiento en parte del atractivo. Es una provincia ideal para viajeros curiosos, de esos que quieren entender el lugar y no solo sacarle una foto.",
@@ -60,15 +60,15 @@ const destinos = [
       "Iguazú impacta desde el cuerpo: el sonido del agua, la humedad del ambiente y la potencia de la selva generan una experiencia sensorial completa. Las pasarelas permiten distintos puntos de vista sobre las cataratas y muestran cómo la naturaleza puede ser, al mismo tiempo, inmensa y delicada. Es un destino que emociona incluso a quienes viajan mucho y creen que ya lo vieron todo.",
   },
   {
-    nombre: "Córdoba",
-    provincia: "Sierras Centrales",
+    nombre: "Sierras Centrales",
+    provincia: "Córdoba",
     imagen: "/images/cordoba.jpg",
     descripcion:
       "Córdoba tiene una versatilidad que la vuelve siempre vigente: sierras, ríos, pueblos con personalidad y una escena cultural activa durante todo el año. Se puede alternar entre descanso, trekking suave, recorridos históricos o escapadas gastronómicas sin grandes distancias. Es una opción muy completa para quienes buscan viajes prácticos, variados y con buen equilibrio entre naturaleza y vida urbana.",
   },
   {
     nombre: "Mar del Plata",
-    provincia: "Costa Atlántica",
+    provincia: "Buenos Aires",
     imagen: "/images/mar-del-plata.jpg",
     descripcion:
       "Mar del Plata mantiene su lugar como gran referencia de la costa atlántica por una razón clara: combina playa, identidad urbana y agenda cultural de manera constante. Más allá del verano, ofrece propuestas para todo el año, con circuitos gastronómicos, caminatas costeras y espacios culturales muy activos. Es un destino ideal para quienes quieren mar, movimiento y servicios completos en un solo lugar.",
@@ -98,6 +98,7 @@ export default function App() {
 
   const navLabel = useMemo(() => (view === "home" ? "Quiénes somos" : "Volver al inicio"), [view])
 
+export default function App() {
   return (
     <div className="page-shell">
       <div className="animated-map" aria-hidden="true" />
