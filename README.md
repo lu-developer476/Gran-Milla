@@ -25,9 +25,6 @@ El proyecto busca presentar destinos, paisajes y cultura del país mediante una 
 Herramientas de desarrollo:
 
 - Node.js
-- npm
-- Git
-- GitHub
 
 ---
 
